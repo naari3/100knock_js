@@ -2,10 +2,10 @@ function n_gram(n, arg) {
   var list = [];
   var j = 0;
   for (var i = 0; i < Math.ceil(arg.length / (n-1)); i++) {
-    list[i] = "";
+    list[i] = [];
     for (var k = 0; k < n; k++) {
       if (arg[j+k]) {
-        list[i] += arg[j+k];
+        list[i].push(arg[j+k]);
       }
     }
     j += n-1
